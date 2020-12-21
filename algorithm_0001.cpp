@@ -2,9 +2,30 @@
 // Created by LQYHE on 2020/12/21.
 //
 
+/***
+ * 1. 两数之和
+ * 给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。
+
+你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。
+
+ 
+
+示例:
+
+给定 nums = [2, 7, 11, 15], target = 9
+
+因为 nums[0] + nums[1] = 2 + 7 = 9
+所以返回 [0, 1]
+
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/two-sum
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+ */
+
 #include <vector>
-#include <cstring>
 #include <iostream>
+#include <map>
+#include <unordered_map>
 
 using namespace std;
 
@@ -13,48 +34,24 @@ using namespace std;
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
-        int size = (target+1)/2;
-        item arr[size+1][2];
         for(int i = 0;i<nums.size();++i)
         {
-            if(nums[i] > target)
-                continue;
-            if(nums[i] < size)
+            int par_val = target - nums[i];
+            auto iter = m_map.find(par_val);
+            if(iter == m_map.end())
             {
-                if(arr[nums[i]][1].is_set)
-                {
-                    return vector<int>{arr[nums[i]][1].value,i};
-                }
-                arr[nums[i]][0].is_set = true;
-                arr[nums[i]][0].value = i;
-            }
-            else if(nums[i] > size)
-            {
-                int sm_index = target - nums[i];
-                if(arr[sm_index][0].is_set)
-                {
-                    return vector<int>{arr[sm_index][0].value,i};
-                }
-                arr[sm_index][1].is_set = true;
-                arr[sm_index][1].value = i;
+                m_map.emplace(nums[i],i);
             }
             else
             {
-                if(arr[nums[i]][0].is_set)
-                {
-                    return vector<int>{arr[nums[i]][0].value,i};
-                }
-                arr[nums[i]][0].is_set = true;
-                arr[nums[i]][0].value = i;
+                return vector<int>{iter->second,i};
             }
         }
         return vector<int>();
     }
+
 private:
-    struct item{
-        int value = 0;
-        bool is_set = false;
-    };
+    std::unordered_map<int,int> m_map;
 };
 
 
