@@ -36,31 +36,40 @@ public:
     ListNode *mergeTwoLists(ListNode *l1, ListNode *l2)
     {
         ListNode* l3 = nullptr;
+        ListNode** tmp3 = &l3;
         while (l1 || l2)
         {
             if(!l1)
             {
-                l3 ? l3->next = l2 : l3 = l2;
+                l3 ? (*tmp3)->next = l2 : (*tmp3) = l2;
                 return l3;
             }
             else if(!l2)
             {
-                l3 ? l3->next = l1 : l3 = l1;
+                l3 ? (*tmp3)->next = l1 : (*tmp3) = l1;
                 return l3;
             }
             else{
                 if(l1->val < l2->val)
                 {
-                    l3
+                    (*tmp3)->next = l1;
+                    tmp3 = &(*tmp3)->next;
+                    l1 = l1->next;
+                }
+                else
+                {
+                    (*tmp3)->next = l2;
+                    tmp3 = &(*tmp3)->next;
+                    l2 = l2->next;
                 }
             }
         }
+        return l3;
     }
 };
 
 int main(int argc, char *argv[])
 {
-
 
     return 0;
 }
