@@ -66,7 +66,7 @@ public:
         }
         return sub;
 #else
-
+        return 0;
 #endif
     }
 };
