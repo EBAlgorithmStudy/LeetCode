@@ -51,28 +51,18 @@ class Solution
 public:
     int removeDuplicates(vector<int> &nums)
     {
-        int cur_index = 0;
-        int judge_value = 0;
         if(nums.empty())
         {
             return 0;
         }
-        judge_value = nums[0];
-        if(nums.size() == 1)
+        int cur_index = 0;
+        for(int i =0;i<nums.size();++i)
         {
-            return ++cur_index;
-        }
-        for(int i =1;i<nums.size();++i)
-        {
-            if(judge_value != nums[i])
+            if(nums[cur_index] != nums[i])
             {
-                if(cur_index != i) {
-                    judge_value = nums[i];
-                    nums[++cur_index] = judge_value;
-                }
+                    nums[++cur_index] = nums[i];
             }
         }
-
         return ++cur_index;
     }
 };
