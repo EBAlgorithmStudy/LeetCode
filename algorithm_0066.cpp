@@ -31,18 +31,59 @@
  */
 
 using namespace std;
+#include <vector>
 
-
-class Solution {
+class Solution
+{
 public:
-    vector<int> plusOne(vector<int>& digits) {
-
-    }
+    vector<int> plusOne(vector<int> &digits)
+    {
+#if 0
+        int* tmp = nullptr;
+        int tmp2 = 0;
+        for(int i = digits.size()-1;i>=0;--i)
+        {
+            tmp = &digits[i];
+            ++(*tmp);
+            if(*tmp==10) {
+                tmp2 = 1;
+                *tmp = 0;
+            }
+            else {
+                tmp2 = 0;
+                return digits;
+            }
+        }
+        if(tmp2)
+        {
+            digits.insert(digits.begin(),1);
+        }
+        return digits;
+#else
+        if (digits.size() == 1) {
+            ++digits[0];
+        }
+        else {
+            ++ digits[digits.size()-1];
+            for(int i = digits.size()-2;i>=1;--i) {
+                if(digits[i] ==10) {
+                    ++digits[i-1];
+                }
+                else {
+                    return digits;
+                }
+            }
+        }
+        if(digits[0] == 10) {
+            digits[0] == 0;
+            digits.insert(digits.begin(),1);
+        }
+        return digits;
+#endif
 };
 
 
-
-int main(int argc,char* argv[])
+int main(int argc, char *argv[])
 {
     return 0;
 }
