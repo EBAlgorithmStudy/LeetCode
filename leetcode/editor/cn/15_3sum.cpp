@@ -41,6 +41,7 @@
 using namespace std;
 #include <iostream>
 #include "vector"
+#include "math.h"
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution
 {
