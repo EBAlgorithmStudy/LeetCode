@@ -55,9 +55,9 @@ class Solution
 	void InsertStr(vector<string> &vec, int diff, int index, const string &digits, int item_num[], int item_size, int *num, char ch[][4])
 	{
 		//
-		int tmp = item_size - index - 1;
+		int tmp = item_size - index;
 		int a = digits.at(index) - '2';
-		if (tmp <= 0)//小于0，说明是最后一个
+		if (tmp <= 1)//小于0，说明是最后一个
 		{
 			for (int i = 0; i < num[a]; ++i)
 			{
@@ -67,7 +67,7 @@ class Solution
 		}
 		else
 		{
-			int item_sum = item_num[tmp - 1];
+			int item_sum = item_num[tmp-1];
 			for (int i = 0; i < num[a]; ++i)
 			{
 				int tmp = diff + i * item_sum;
