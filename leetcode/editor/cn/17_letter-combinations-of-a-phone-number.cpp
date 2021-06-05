@@ -40,18 +40,161 @@
 
 
 using namespace std;
-
+#include <string>
+#include <iostream>
+#include "vector"
+#include "math.h"
 //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
+#if 1
+class Solution
+{
+	//vec：数组
+	//diff：偏移量
+	//index：解析到digits的第几位
+	//digits：输入的数
+	void InsertStr(vector<string> &vec, int diff, int index, const string &digits, int item_num[], int item_size, int *num, char ch[][4])
+	{
+		//
+		int tmp = item_size - index - 1;
+		int a = digits.at(index) - '2';
+		if (tmp <= 0)//小于0，说明是最后一个
+		{
+			for (int i = 0; i < num[a]; ++i)
+			{
+//				cout<<"the : " <<diff+i<<"insert : "<<ch[a][i]<<endl;
+				vec[diff + i].append(1, ch[a][i]);
+			}
+		}
+		else
+		{
+			int item_sum = item_num[tmp - 1];
+			for (int i = 0; i < num[a]; ++i)
+			{
+				int tmp = diff + i * item_sum;
+				for (int j = 0; j < item_sum; ++j)
+				{
+//					cout<<"the : " <<tmp+j<<"insert : "<<ch[a][i]<<endl;
+					vec.at(tmp + j).append(1, ch[a][i]);
+				}
+				InsertStr(vec, diff + i * item_sum, index + 1, digits, item_num, item_size, num, ch);
+			}
+		}
+	}
 public:
-    vector<string> letterCombinations(string digits) {
-
-    }
+	vector<string> letterCombinations(string digits)
+	{
+		char ch[8][4] = {
+			{'a', 'b', 'c', ' '},
+			{'d', 'e', 'f', ' '},
+			{'g', 'h', 'i', ' '},
+			{'j', 'k', 'l', ' '},
+			{'m', 'n', 'o', ' '},
+			{'p', 'q', 'r', 's'},
+			{'t', 'u', 'v', ' '},
+			{'w', 'x', 'y', 'z'}
+		};
+		int size = digits.size();
+		if (size <= 0)
+		{
+			return vector<string>();
+		}
+		int num[8] = {3, 3, 3, 3, 3, 4, 3, 4};
+		int item_num[size];//在有i位确定后有多少种组合
+		int sum = 1;
+		for (int i = 0; i < size; ++i)
+		{
+			int a = digits.at(i) - '2';
+			sum *= num[a];
+			item_num[i] = sum;
+		}
+		std::vector<string> arr(sum);
+		InsertStr(arr, 0, 0, digits, item_num, size, num, ch);
+		return arr;
+	}
 };
+#else
+class Solution
+{
+	//vec：数组
+	//diff：偏移量
+	//index：解析到digits的第几位
+	//digits：输入的数
+	void InsertStr(vector<string> &vec, int diff, int index, const string &digits, int *item_num, int item_size, int *num, char ch[][4])
+	{
+		//
+		int item_sum = 0;
+		int tmp = item_size - index - 1;
+		if (tmp <= 0)//小于0，说明是最后一个
+		{
+			item_sum = 1;
+			for (int i = 0; i < num[index]; ++i)
+			{
+				vec[diff + i].append(1,ch[digits.at(index)-'2'][i]);
+			}
+		}
+		else
+		{
+			item_sum = item_num[tmp - 1];
+			for (int i = 0; i < num[index]; ++i)
+			{
+				int tmp = diff + i * item_sum;
+				for (int j = 0; j < item_sum; ++j)
+				{
+					vec.at(tmp + j).append(1, ch[digits.at(index) - '2'][i]);
+				}
+				InsertStr(vec, diff + i * item_sum, index + 1, digits, item_num, item_size, num, ch);
+			}
+		}
+	}
+public:
+	vector<string> letterCombinations(string digits)
+	{
+		char ch[8][4] = {
+			{'a', 'b', 'c', ' '},
+			{'d', 'e', 'f', ' '},
+			{'g', 'h', 'i', ' '},
+			{'j', 'k', 'l', ' '},
+			{'m', 'n', 'o', ' '},
+			{'p', 'q', 'r', 's'},
+			{'t', 'u', 'v', ' '},
+			{'w', 'x', 'y', 'z'}
+		};
+		int size = digits.size();
+		if(size<=0)
+		{
+			return vector<string>();
+		}
+		int num[8] = {3, 3, 3, 3, 3, 4, 3, 4};
+		int item_num[size];//在有i位确定后有多少种组合
+		int sum = 1;
+		for (int i = 0; i < size; ++i)
+		{
+			sum *= num[i];
+			item_num[i] = sum;
+		}
+		std::vector<string> arr(sum);
+		InsertStr(arr, 0, 0, digits, item_num, size, num, ch);
+		return arr;
+	}
+};
+#endif
 //leetcode submit region end(Prohibit modification and deletion)
 
 
-int main(int argc,char* argv[])
+int main(int argc, char *argv[])
 {
-    return 0;
+	Solution sol;
+	string digits = "78";
+	auto arr = sol.letterCombinations(digits);
+	for (int i  = 0;i<arr.size();++i)
+	{
+		cout << ""<< i <<" : "<< arr[i] << endl;
+	}
+
+//	vector<string> vec;
+//	vec.push_back(string());
+//	auto& str = vec[0];
+//	str = "aabbc";
+//	cout<<vec[0]<<endl;
+	return 0;
 }
