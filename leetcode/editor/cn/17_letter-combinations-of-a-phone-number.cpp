@@ -45,7 +45,7 @@ using namespace std;
 #include "vector"
 #include "math.h"
 //leetcode submit region begin(Prohibit modification and deletion)
-#if 1
+#if 0
 class Solution
 {
 	//vec：数组
@@ -54,10 +54,11 @@ class Solution
 	//digits：输入的数
 	void InsertStr(vector<string> &vec, int diff, int index, const string &digits, int item_num[], int item_size, int *num, char ch[][4])
 	{
-		//
-		int tmp = item_size - index;
+		//确定除本次外还剩余的数有多少个
+		int remain = item_size - index - 1;
+		//获取第index个数字是多少
 		int a = digits.at(index) - '2';
-		if (tmp <= 1)//小于0，说明是最后一个
+		if (remain <= 0)//小于或者等于0，说明是最后一个
 		{
 			for (int i = 0; i < num[a]; ++i)
 			{
@@ -67,16 +68,19 @@ class Solution
 		}
 		else
 		{
-			int item_sum = item_num[tmp-1];
+			//获取当前剩余的数字能够有的组合
+			int item_sum = item_num[remain];
 			for (int i = 0; i < num[a]; ++i)
 			{
-				int tmp = diff + i * item_sum;
-				for (int j = 0; j < item_sum; ++j)
+				//当前数字上对应的字母，每一个都能够和剩余数字拥有item_sum个组合
+				int tmp2 = diff + i * item_sum;
+				int tmp3 = tmp2 + item_sum;
+				for (int j = tmp2; j < tmp3; ++j)
 				{
-//					cout<<"the : " <<tmp+j<<"insert : "<<ch[a][i]<<endl;
-					vec.at(tmp + j).append(1, ch[a][i]);
+//					cout<<"the : " <<remain+j<<"insert : "<<ch[a][i]<<endl;
+					vec.at(j).append(1, ch[a][i]);
 				}
-				InsertStr(vec, diff + i * item_sum, index + 1, digits, item_num, item_size, num, ch);
+				InsertStr(vec, tmp2, index + 1, digits, item_num, item_size, num, ch);
 			}
 		}
 	}
@@ -99,52 +103,54 @@ public:
 			return vector<string>();
 		}
 		int num[8] = {3, 3, 3, 3, 3, 4, 3, 4};
-		int item_num[size];//在有i位确定后有多少种组合
+		int item_num[size+1];//在有i位确定后有多少种组合
 		int sum = 1;
 		for (int i = 0; i < size; ++i)
 		{
-			int a = digits.at(i) - '2';
+			int a = digits.at(size - i - 1) - '2';
 			sum *= num[a];
-			item_num[i] = sum;
+			item_num[i+1] = sum;
 		}
 		std::vector<string> arr(sum);
 		InsertStr(arr, 0, 0, digits, item_num, size, num, ch);
 		return arr;
 	}
 };
-#else
+#elseif 0
 class Solution
 {
-	//vec：数组
-	//diff：偏移量
-	//index：解析到digits的第几位
-	//digits：输入的数
-	void InsertStr(vector<string> &vec, int diff, int index, const string &digits, int *item_num, int item_size, int *num, char ch[][4])
+private:
+	void InsertStr(char ch[8][4], int size, string &digits, int flag, vector<string>& vec)
 	{
-		//
-		int item_sum = 0;
-		int tmp = item_size - index - 1;
-		if (tmp <= 0)//小于0，说明是最后一个
+		std::string str;
+		for (int i = 0; i < size; ++i)
 		{
-			item_sum = 1;
-			for (int i = 0; i < num[index]; ++i)
+			int a = digits.at(i) - '2';
+			int tmp = (flag >> (i * 2)) & 3;
+//			cout<<"===========start=============="<<endl;
+//			cout<<"i                :"<<i<<endl;
+//			cout<<"flag             :"<<flag<<endl;
+//			cout<<"(flag >> (i * 2)):"<<(flag >> (i * 2))<<endl;
+//			cout<<"tmp              :"<<tmp<<endl;
+			switch (tmp)
 			{
-				vec[diff + i].append(1,ch[digits.at(index)-'2'][i]);
+				case 0:
+				case 1:
+				case 2:
+					str.append(1, ch[a][tmp]);
+					break;
+				case 3:
+					if (ch[a][tmp] == ' ')
+					{
+//						cout<<"return return  a:"<<a<<"   tmp:"<<tmp<<endl;
+						return;
+					}
+					str.append(1, ch[a][tmp]);
+					break;
 			}
 		}
-		else
-		{
-			item_sum = item_num[tmp - 1];
-			for (int i = 0; i < num[index]; ++i)
-			{
-				int tmp = diff + i * item_sum;
-				for (int j = 0; j < item_sum; ++j)
-				{
-					vec.at(tmp + j).append(1, ch[digits.at(index) - '2'][i]);
-				}
-				InsertStr(vec, diff + i * item_sum, index + 1, digits, item_num, item_size, num, ch);
-			}
-		}
+		vec.push_back(str);
+
 	}
 public:
 	vector<string> letterCombinations(string digits)
@@ -159,22 +165,54 @@ public:
 			{'t', 'u', 'v', ' '},
 			{'w', 'x', 'y', 'z'}
 		};
-		int size = digits.size();
-		if(size<=0)
+		vector<string> vec;
+		if(digits.size() == 0)
 		{
-			return vector<string>();
+			return vec;
 		}
-		int num[8] = {3, 3, 3, 3, 3, 4, 3, 4};
-		int item_num[size];//在有i位确定后有多少种组合
-		int sum = 1;
-		for (int i = 0; i < size; ++i)
+		for (int flag = 0; flag < pow(4,digits.size()); ++flag)
 		{
-			sum *= num[i];
-			item_num[i] = sum;
+			InsertStr(ch,digits.size(),digits,flag,vec);
 		}
-		std::vector<string> arr(sum);
-		InsertStr(arr, 0, 0, digits, item_num, size, num, ch);
-		return arr;
+		return vec;
+	}
+};
+#else
+#include "unordered_map"
+class Solution {
+public:
+	vector<string> letterCombinations(string digits) {
+		vector<string> combinations;
+		if (digits.empty()) {
+			return combinations;
+		}
+		unordered_map<char, string> phoneMap{
+			{'2', "abc"},
+			{'3', "def"},
+			{'4', "ghi"},
+			{'5', "jkl"},
+			{'6', "mno"},
+			{'7', "pqrs"},
+			{'8', "tuv"},
+			{'9', "wxyz"}
+		};
+		string combination;
+		backtrack(combinations, phoneMap, digits, 0, combination);
+		return combinations;
+	}
+
+	void backtrack(vector<string>& combinations, const unordered_map<char, string>& phoneMap, const string& digits, int index, string& combination) {
+		if (index == digits.length()) {
+			combinations.push_back(combination);
+		} else {
+			char digit = digits[index];
+			const string& letters = phoneMap.at(digit);
+			for (const char& letter: letters) {
+				combination.push_back(letter);
+				backtrack(combinations, phoneMap, digits, index + 1, combination);
+				combination.pop_back();
+			}
+		}
 	}
 };
 #endif
@@ -184,11 +222,11 @@ public:
 int main(int argc, char *argv[])
 {
 	Solution sol;
-	string digits = "78";
+	string digits = "23";
 	auto arr = sol.letterCombinations(digits);
-	for (int i  = 0;i<arr.size();++i)
+	for (int i = 0; i < arr.size(); ++i)
 	{
-		cout << ""<< i <<" : "<< arr[i] << endl;
+		cout << "" << i << " : " << arr[i] << endl;
 	}
 
 //	vector<string> vec;
