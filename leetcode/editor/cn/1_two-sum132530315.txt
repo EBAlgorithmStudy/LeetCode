@@ -1,0 +1,35 @@
+
+#include <vector>
+#include <iostream>
+#include <map>
+#include <unordered_map>
+
+using namespace std;
+
+
+
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        for(int i = 0;i<nums.size();++i)
+        {
+            int par_val = target - nums[i];
+            auto iter = m_map.find(par_val);
+            if(iter == m_map.end())
+            {
+                m_map.emplace(nums[i],i);
+            }
+            else
+            {
+                return vector<int>{iter->second,i};
+            }
+        }
+        return vector<int>();
+    }
+
+private:
+    std::unordered_map<int,int> m_map;
+};
+
+//runtime:12 ms
+//memory:9.2 MB

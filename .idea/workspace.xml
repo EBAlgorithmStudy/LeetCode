@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="leetcode-study" targetName="104_maximum-depth-of-binary-tree" />
+      <config projectName="leetcode-study" targetName="1_two-sum" />
+      <config projectName="leetcode-study" targetName="45_jump-game-ii" />
+      <config projectName="leetcode-study" targetName="44_wildcard-matching" />
+      <config projectName="leetcode-study" targetName="55_jump-game" />
+    </generated>
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration PROFILE_NAME="Debug-MinGW" CONFIG_NAME="Debug" TOOLCHAIN_NAME="MinGW" ENABLED="true" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="47bf768d-716b-4a0f-8035-a3c96feded4b" name="默认的" comment="默认的">
+      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/editor/cn/104_maximum-depth-of-binary-tree.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/editor/cn/1_two-sum.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/editor/cn/1_two-sum132530315.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/editor/cn/44_wildcard-matching.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/editor/cn/45_jump-game-ii.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/editor/cn/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/editor/cn/all.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/editor/cn/translation.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug-MinGW" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CMakeLists.txt" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="1lvZ2we3FknlhG9punsYq0zLS5i" />
+  <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="false" id="Update" />
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="cidr.known.project.marker" value="true" />
+    <property name="cmake.loaded.for.project" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/CMakeLists.txt" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="leetcode.id" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\LeetCode\leetcode\editor\cn" />
+      <recent name="E:\LeetCode" />
+    </key>
+  </component>
+  <component name="RunManager" selected="CMake 应用程序.104_maximum-depth-of-binary-tree">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="104_maximum-depth-of-binary-tree" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="leetcode-study" TARGET_NAME="104_maximum-depth-of-binary-tree" CONFIG_NAME="Debug-MinGW" RUN_TARGET_PROJECT_NAME="leetcode-study" RUN_TARGET_NAME="104_maximum-depth-of-binary-tree">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="1_two-sum" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="leetcode-study" TARGET_NAME="1_two-sum" CONFIG_NAME="Debug-MinGW" RUN_TARGET_PROJECT_NAME="leetcode-study" RUN_TARGET_NAME="1_two-sum">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="44_wildcard-matching" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="leetcode-study" TARGET_NAME="44_wildcard-matching" CONFIG_NAME="Debug-MinGW" RUN_TARGET_PROJECT_NAME="leetcode-study" RUN_TARGET_NAME="44_wildcard-matching">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="45_jump-game-ii" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="leetcode-study" TARGET_NAME="45_jump-game-ii" CONFIG_NAME="Debug-MinGW" RUN_TARGET_PROJECT_NAME="leetcode-study" RUN_TARGET_NAME="45_jump-game-ii">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="55_jump-game" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="leetcode-study" TARGET_NAME="55_jump-game" CONFIG_NAME="Debug-MinGW" RUN_TARGET_PROJECT_NAME="leetcode-study" RUN_TARGET_NAME="55_jump-game">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake 应用程序.104_maximum-depth-of-binary-tree" />
+      <item itemvalue="CMake 应用程序.1_two-sum" />
+      <item itemvalue="CMake 应用程序.44_wildcard-matching" />
+      <item itemvalue="CMake 应用程序.45_jump-game-ii" />
+      <item itemvalue="CMake 应用程序.55_jump-game" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SshConsoleOptionsProvider">
+    <option name="myEncoding" value="UTF-8" />
+    <option name="myConnectionType" value="NONE" />
+    <option name="myConnectionId" value="" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\LQYHE\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="47bf768d-716b-4a0f-8035-a3c96feded4b" name="默认的" comment="" />
+      <created>1608479321585</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1608479321585</updated>
+      <workItem from="1608479323996" duration="3902000" />
+      <workItem from="1609261308757" duration="2288000" />
+      <workItem from="1609681831064" duration="333000" />
+      <workItem from="1609682177835" duration="93000" />
+      <workItem from="1609682725591" duration="5649000" />
+      <workItem from="1610115935662" duration="51000" />
+      <workItem from="1610115994485" duration="255000" />
+      <workItem from="1610202732611" duration="2438000" />
+      <workItem from="1610379159730" duration="3769000" />
+      <workItem from="1610548849391" duration="4752000" />
+      <workItem from="1610988028832" duration="13000" />
+      <workItem from="1622026311034" duration="6144000" />
+      <workItem from="1622082382140" duration="5222000" />
+      <workItem from="1622167064334" duration="2581000" />
+      <workItem from="1622459928847" duration="599000" />
+      <workItem from="1622511149071" duration="7429000" />
+      <workItem from="1622786132802" duration="2637000" />
+      <workItem from="1622801763139" duration="307000" />
+      <workItem from="1622802080473" duration="5000" />
+      <workItem from="1622880622005" duration="216000" />
+      <workItem from="1622880838838" duration="127000" />
+      <workItem from="1622880976771" duration="14032000" />
+      <workItem from="1623028296337" duration="5335000" />
+      <workItem from="1623035472445" duration="3344000" />
+      <workItem from="1623122705757" duration="1942000" />
+      <workItem from="1623201721716" duration="1959000" />
+      <workItem from="1623305798794" duration="2561000" />
+      <workItem from="1623317994022" duration="4252000" />
+      <workItem from="1623376044256" duration="3244000" />
+      <workItem from="1623405814822" duration="4733000" />
+      <workItem from="1623723382650" duration="8000" />
+      <workItem from="1623813547255" duration="9027000" />
+      <workItem from="1623894662914" duration="8561000" />
+      <workItem from="1623985394255" duration="818000" />
+      <workItem from="1623986226219" duration="19000" />
+      <workItem from="1623986248196" duration="26000" />
+      <workItem from="1623986283210" duration="408000" />
+    </task>
+    <task id="LOCAL-00001" summary="完成第20题">
+      <created>1609262826402</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1609262826402</updated>
+    </task>
+    <task id="LOCAL-00002" summary="第21题，代码临时写完，未测试">
+      <created>1609689164197</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1609689164197</updated>
+    </task>
+    <task id="LOCAL-00003" summary="第21题完成">
+      <created>1609690393574</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1609690393574</updated>
+    </task>
+    <task id="LOCAL-00004" summary="第26题完成,尝试优化">
+      <created>1609691343205</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1609691343205</updated>
+    </task>
+    <task id="LOCAL-00005" summary="完成58题，同时新建53题（未完成）">
+      <created>1610205365992</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1610205365992</updated>
+    </task>
+    <task id="LOCAL-00006" summary="生成66题（对，我就是灌水来保证每日提交=-=）">
+      <created>1610379254807</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1610379254807</updated>
+    </task>
+    <task id="LOCAL-00007" summary="完成第66题">
+      <created>1610383675361</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1610383675361</updated>
+    </task>
+    <task id="LOCAL-00008" summary="完成第66题">
+      <created>1610383886444</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1610383886444</updated>
+    </task>
+    <task id="LOCAL-00009" summary="第68题">
+      <created>1610550030217</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1610550030217</updated>
+    </task>
+    <task id="LOCAL-00010" summary="第68题完成">
+      <created>1610552386173</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1610552386173</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="完成第20题" />
+    <MESSAGE value="第21题，代码临时写完，未测试" />
+    <MESSAGE value="第21题完成" />
+    <MESSAGE value="第26题完成,尝试优化" />
+    <MESSAGE value="完成58题，同时新建53题（未完成）" />
+    <MESSAGE value="生成66题（对，我就是灌水来保证每日提交=-=）" />
+    <MESSAGE value="完成第66题" />
+    <MESSAGE value="第68题" />
+    <MESSAGE value="第68题完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="第68题完成" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/leetcode/editor/cn/11_container-with-most-water.cpp</url>
+          <line>66</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/leetcode/editor/cn/8_string-to-integer-atoi.cpp</url>
+          <line>131</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/leetcode/editor/cn/8_string-to-integer-atoi.cpp</url>
+          <line>174</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/leetcode/editor/cn/15_3sum.cpp</url>
+          <line>117</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/leetcode/editor/cn/15_3sum.cpp</url>
+          <line>79</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/leetcode/editor/cn/16_3sum-closest.cpp</url>
+          <line>53</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/leetcode/editor/cn/16_3sum-closest.cpp</url>
+          <line>56</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/leetcode/editor/cn/16_3sum-closest.cpp</url>
+          <line>63</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/leetcode/editor/cn/17_letter-combinations-of-a-phone-number.cpp</url>
+          <line>177</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/leetcode/editor/cn/17_letter-combinations-of-a-phone-number.cpp</url>
+          <line>99</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/leetcode/editor/cn/17_letter-combinations-of-a-phone-number.cpp</url>
+          <line>57</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/leetcode/editor/cn/17_letter-combinations-of-a-phone-number.cpp</url>
+          <line>70</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/leetcode/editor/cn/19_remove-nth-node-from-end-of-list.cpp</url>
+          <line>66</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/leetcode/editor/cn/19_remove-nth-node-from-end-of-list.cpp</url>
+          <line>155</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/leetcode/editor/cn/24_swap-nodes-in-pairs.cpp</url>
+          <line>103</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/leetcode/editor/cn/24_swap-nodes-in-pairs.cpp</url>
+          <line>114</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/leetcode/editor/cn/215_kth-largest-element-in-an-array.cpp</url>
+          <line>73</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/leetcode/editor/cn/Offer-40_zui-xiao-de-kge-shu-lcof.cpp</url>
+          <line>78</line>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/leetcode/editor/cn/Offer-40_zui-xiao-de-kge-shu-lcof.cpp</url>
+          <line>73</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/leetcode/editor/cn/65_valid-number.cpp</url>
+          <line>123</line>
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
