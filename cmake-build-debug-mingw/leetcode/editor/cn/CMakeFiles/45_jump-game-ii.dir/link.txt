@@ -1,3 +1,0 @@
-C:\Users\LQYHE\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\211.7442.42\bin\cmake\win\bin\cmake.exe -E rm -f CMakeFiles\45_jump-game-ii.dir/objects.a
-C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\ar.exe cr CMakeFiles\45_jump-game-ii.dir/objects.a @CMakeFiles\45_jump-game-ii.dir\objects1.rsp
-C:\PROGRA~1\MINGW-~1\X86_64~1.0-W\mingw64\bin\G__~1.EXE -g -Wl,--whole-archive CMakeFiles\45_jump-game-ii.dir/objects.a -Wl,--no-whole-archive -o 45_jump-game-ii.exe -Wl,--out-implib,lib45_jump-game-ii.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\45_jump-game-ii.dir\linklibs.rsp
